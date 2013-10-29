@@ -1,0 +1,19 @@
+<package>
+  <description brief="vision">
+
+     vision
+
+  </description>
+  <author>Xinkun Nie</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/vision</url>
+  <depend package="pcl"/>
+  <depend package="pcl_ros"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="sensor_msgs"/>
+
+</package>
+
+
