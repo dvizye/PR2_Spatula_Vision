@@ -34,22 +34,27 @@ def on_changeLH(value):
     global LOWER_H
     LOWER_H = value
     getThresholdImg()
+
 def on_changeUH(value):
     global UPPER_H
     UPPER_H = value
     getThresholdImg()
+
 def on_changeLS(value):
     global LOWER_S
     LOWER_S = value
     getThresholdImg()
+
 def on_changeUS(value):
     global UPPER_S
     UPPER_S = value
     getThresholdImg()
+
 def on_changeLV(value):
     global LOWER_V
     LOWER_V = value
     getThresholdImg()
+
 def on_changeUV(value):
     global UPPER_V
     UPPER_V = value

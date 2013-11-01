@@ -19,8 +19,8 @@ void pclCallback(const sensor_msgs::PointCloud2ConstPtr& input)
 
   PointCloud<pcl::PointXYZHSV>::Ptr cloud_ptr(new PointCloud<pcl::PointXYZHSV>());
   PointCloudXYZRGBtoXYZHSV(cloud_raw, *cloud_ptr);
-
   PassThrough<PointXYZHSV> color_filter;
+
   color_filter.setInputCloud(cloud_ptr);
   color_filter.setFilterFieldName("h");
   color_filter.setFilterLimits(82, 162);
@@ -61,10 +61,8 @@ void pclCallback(const sensor_msgs::PointCloud2ConstPtr& input)
   toROSMsg(*cloud_outlier_filtered, output);
   output.header.frame_id = "camera_link";
   pub.publish(output);
-
-  ROS_INFO("Yes i'm actually alive");
-  //ROS_INFO("I heard: [%s]", msg->width.c_str());
 }
+
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "pcl_listener");
